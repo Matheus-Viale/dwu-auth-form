@@ -1,0 +1,27 @@
+<div class="container mt-5">
+    <div class="card mx-auto" style="max-width: 400px;">
+      <div class="card-body">
+        <h2 class="card-title text-center">Login</h2>
+  
+        <form>
+          <div class="mb-3">
+            <label for="usuario" class="form-label">Usuário:</label>
+            <input type="text" id="usuario" class="form-control" [(ngModel)]="usuario" [ngModelOptions]="{standalone: true}" />
+          </div>
+  
+          <div class="mb-3">
+            <label for="senha" class="form-label">Senha:</label>
+            <input type="password" id="senha" class="form-control" [(ngModel)]="senha" [ngModelOptions]="{standalone: true}" />
+          </div>
+  
+          <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-primary" (click)="realizarLogin()">Login</button>
+          </div>
+          <div *ngIf="erroLogin" class="alert alert-danger mt-5 show" role="alert">
+            Credenciais inválidas. Por favor, verifique seu usuário e senha.
+          </div>
+        </form>
+  
+      </div>
+    </div>
+</div>
